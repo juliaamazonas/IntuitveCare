@@ -1,0 +1,102 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+    "name": "API Operadoras ANS",
+    "description": "Coleção para demonstrar a API de busca de operadoras de planos de saúde da ANS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Operadoras (Paginado)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/operadoras?pagina=1&limite=20",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "operadoras"],
+          "query": [
+            {
+              "key": "pagina",
+              "value": "1"
+            },
+            {
+              "key": "limite",
+              "value": "20"
+            }
+          ]
+        },
+        "description": "Lista todas as operadoras com paginação"
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Operadoras por Nome",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/operadoras/buscar?termo=unimed",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "operadoras", "buscar"],
+          "query": [
+            {
+              "key": "termo",
+              "value": "unimed"
+            }
+          ]
+        },
+        "description": "Busca operadoras pelo termo 'unimed'"
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Operadoras por CNPJ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/operadoras/buscar?termo=01234567",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "operadoras", "buscar"],
+          "query": [
+            {
+              "key": "termo",
+              "value": "01234567"
+            }
+          ]
+        },
+        "description": "Busca operadoras por parte do CNPJ"
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Operadoras por UF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/operadoras/buscar?termo=SP",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "operadoras", "buscar"],
+          "query": [
+            {
+              "key": "termo",
+              "value": "SP"
+            }
+          ]
+        },
+        "description": "Busca operadoras pela UF (SP)"
+      },
+      "response": []
+    }
+  ]
+}
